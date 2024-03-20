@@ -23,4 +23,5 @@ def receive_weather_data(request):
 
 def display_weather_data(request):
     weather_data = WeatherData.objects.all()
+    
     return render(request, 'weather_display.html', {'weather_data': weather_data})
